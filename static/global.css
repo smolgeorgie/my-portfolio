@@ -12,11 +12,11 @@
    -------------------------------------------------------------------------- */
 :root {
     /* Font Sizes */
-    --font-size-base: 16px;
-    --font-size-small: 14px;
-    --font-size-large: 18px;
-    --font-size-h1: 3.5rem;
-    --font-size-h2: 2rem;
+    --font-size-base: clamp(14px, 2.5vw, 18px);
+    --font-size-small: clamp(12px, 2vw, 16px);
+    --font-size-large: clamp(16px, 3vw, 22px);
+    --font-size-h1: clamp(3.5rem, 8vw, 5rem);
+    --font-size-h2: clamp(1.5rem, 5vw, 3rem);
     
     /* Font Families */
     --font-family-heading: "Freckle Face", system-ui;
@@ -31,9 +31,9 @@
     --color-flower-accent: #ffe66d;
     
     /* Spacing */
-    --spacing-small: 0.5rem;
-    --spacing-medium: 1rem;
-    --spacing-large: 2rem;
+    --spacing-small: clamp(0.25rem, 1vw, 0.75rem);
+    --spacing-medium: clamp(0.5rem, 2vw, 1.5rem);
+    --spacing-large: clamp(1rem, 4vw, 3rem);
 }
 
 /* --------------------------------------------------------------------------

@@ -25,7 +25,7 @@
 
          h1 {
             font-size: var(--font-size-h1);
-            max-width: 30ch;
+            max-width: 9ch;
             margin: 2rem 0 1.2rem 0;
          }
 
