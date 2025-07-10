@@ -30,4 +30,15 @@
          }
         
     }
+
+        .about-me {
+         h2 {
+            font-size: var(--font-size-h2);
+         }
+
+          p {
+            font-size: var(--font-size-large);
+         }
+        
+    }
 </style>
