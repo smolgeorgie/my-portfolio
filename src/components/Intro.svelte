@@ -1,6 +1,6 @@
 <main>
     <section class="hero">
-        <h1>Ilona van Oosbree</h1>
+        <h1>BREAKING THE WEB WITH <em>ILONA</em></h1>
         <p>Salutations! I'm Ilona van Oosbree, a Frontend Design and Development graduate since 2025 at the Amsterdam University of Applied Sciences and a proud wielder of the holy trinity: HTML, CSS, and JavaScript.</p>
     </section>
     
@@ -17,16 +17,21 @@
 <style>
 
     main {
-        margin-left: .5rem;
+        margin: 0 .5em 0 .5em;
     }
 
     .hero {
+        gap: .5rem;
+
          h1 {
             font-size: var(--font-size-h1);
+            max-width: 30ch;
+            margin: 2rem 0 1.2rem 0;
          }
 
           p {
             font-size: var(--font-size-p);
+            line-height: 1.4;
          }
         
     }
@@ -40,5 +45,9 @@
             font-size: var(--font-size-large);
          }
         
+    }
+
+    em {
+        color: #9966CC;
     }
 </style>
