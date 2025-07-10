@@ -1,9 +1,67 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Freckle+Face&display=swap');
 
+:root {
     --font-size-base: 16px;
     --font-size-small: 14px;
     --font-size-large: 18px;
-    
     --font-size-h1: 2.25rem;
+    
+    --font-family-heading: "Freckle Face", system-ui;
+    --font-family-body: "Bricolage Grotesque", sans-serif;
+}
 
+/* Base font styles */
+body {
+    font-family: var(--font-family-body);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Utility classes for Bricolage Grotesque */
+.bricolage-light {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.bricolage-regular {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.bricolage-medium {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.bricolage-bold {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Utility class for Freckle Face */
+.freckle-face {
+    font-family: "Freckle Face", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
