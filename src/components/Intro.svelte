@@ -13,3 +13,21 @@
         <p>Looking for a developer who knows her stuff, laughs at her own commit messages, and sprinkles accessibility like confetti That's me!</p>
     </section>
 </main>
+
+<style>
+
+    main {
+        margin-left: .5rem;
+    }
+
+    .hero {
+         h1 {
+            font-size: var(--font-size-h1);
+         }
+
+          p {
+            font-size: var(--font-size-p);
+         }
+        
+    }
+</style>
