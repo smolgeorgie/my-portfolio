@@ -126,13 +126,10 @@
 				<div class="track-info-right">
 					<h3 class="song-title">{playlist[currentTrack].title}</h3>
 					<p class="artist-name">{playlist[currentTrack].artist}</p>
-					<time class="time-info" aria-live="polite">
-						{formatTime(currentTime)} / {formatTime(duration)}
-					</time>
 				</div>
 			</div>
 			
-			<!-- Bottom row: Volume on left, Progress bar on right -->
+			<!-- Bottom row: Volume on left, Time display, Progress bar on right -->
 			<div class="bottom-row">
 				<!-- Volume control on the left -->
 				<div class="volume-section" role="group" aria-label="Volume instelling">
@@ -150,6 +147,11 @@
 						aria-label="Volume: {Math.round(volume * 100)}%"
 					/>
 				</div>
+
+				<!-- Time display next to progress bar -->
+				<time class="time-info" aria-live="polite">
+					{formatTime(currentTime)} / {formatTime(duration)}
+				</time>
 
 				<!-- Progress bar on the right -->
 				<div class="progress-section">
@@ -191,7 +193,6 @@
 
 	/* Hyves-style Music Player */
 	.hyves-player {
-		max-width: 350px;
 		margin: 1rem auto;
 		font-family: Arial, sans-serif;
 		font-size: 11px;
@@ -203,6 +204,7 @@
 		border-radius: 5px;
 		overflow: hidden;
 		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		width: 100%;
 	}
 	
 	.hyves-main {
@@ -212,13 +214,13 @@
 	
 	.top-row {
 		display: flex;
-		align-items: flex-start;
-		gap: 12px;
+		gap: 10px;
 		margin-bottom: 8px;
 		background: white;
 		padding: 6px;
 		border: 1px solid #ddd;
 		border-radius: 3px;
+		background: grey;
 	}
 	
 	.bottom-row {
@@ -235,11 +237,14 @@
 		flex: 1;
 		min-width: 0;
 		text-align: left;
+		background: black;
+		border-radius: 10px;
+		padding: .5em;
 	}
 	
 	.song-title {
 		font-weight: bold;
-		color: #333;
+		color: white;
 		font-size: 11px;
 		margin: 0 0 2px 0;
 		overflow: hidden;
@@ -249,7 +254,7 @@
 	}
 	
 	.artist-name {
-		color: #666;
+		color: white;
 		font-size: 10px;
 		margin: 0 0 3px 0;
 		overflow: hidden;
@@ -267,6 +272,7 @@
 	.hyves-buttons {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 4px;
 		flex-shrink: 0;
 	}
@@ -307,14 +313,14 @@
 	}
 	
 	.hyves-btn, .hyves-play-btn {
-		background: linear-gradient(to bottom, #f0f0f0, #d8d8d8);
-		border: 1px outset #ccc;
+		height: 2rem;
+		width: 2rem;
 		color: #333;
 		cursor: pointer;
-		font-size: 10px;
-		padding: 2px 6px;
+		padding: 0;
 		font-family: Arial, sans-serif;
 		transition: all 0.1s ease;
+		border-radius: 50%;
 	}
 	
 	.hyves-btn:hover, .hyves-play-btn:hover {
@@ -327,8 +333,7 @@
 	}
 	
 	.hyves-play-btn {
-		font-size: 12px;
-		padding: 3px 8px;
+		font-size: 18px;
 		font-weight: bold;
 		color: #0066cc;
 	}

@@ -4,12 +4,14 @@
 
 <main>
     <section class="intro">
-        <h2> Ilona van Oosbree </h2>
+        <h2> Feit </h2>
+        <Music />
         <ul>
             <li> <b> Naam: </b> Ilona </li>
-            <li> <b> Leeftijd: </b> 24 jaar </li>
+            <li> <b> Leeftijd: </b> 24 </li>
             <li> <b> Woonplaats: </b> Regio Utrecht en Rotterdam </li>
             <li> <b> Opleiding: </b> HBO AD Frontend Design and Development </li>
+            <li> <b> Connectie: </b> [ilonavanoosbree linkedin] </li>
         </ul>
         <ul> 
             <li> <b> Bedrijf: </b> Paer Studio </li>
@@ -17,25 +19,18 @@
             <li> <b> Passies: </b> Programmeren </li>
         </ul>
         
-        <!-- Nostalgic Music Player -->
-        <div class="music-section">
-            <Music />
-        </div>
+
     </section>
 </main>
 
 <style>
     .intro {
-        padding: 2rem;
+        padding: .1rem 1rem .1rem 1rem;
         max-width: 800px;
         margin: 0 auto;
+        outline: 2px solid #ccc;
+        border-radius: 8px;
     }
-    
-    .music-section {
-        margin-top: 3rem;
-        text-align: center;
-    }
-
     
     ul {
         list-style: none;
@@ -44,7 +39,7 @@
     }
     
     li {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.2rem;
         font-size: 1.1rem;
     }
     
