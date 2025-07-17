@@ -1,0 +1,407 @@
+<script>
+	import { onMount } from 'svelte';
+	
+	let audio;
+	let isPlaying = false;
+	let currentTime = 0;
+	let duration = 0;
+	let volume = 0.3;
+	let currentTrack = 0;
+	
+	const playlist = [
+		{
+			title: "Feathered Indians",
+			artist: "Tyler Childers",
+			src: "/music/Feathered Indians.mp3",
+			cover: "/favicon.png" // Using favicon as placeholder
+		},
+		{
+			title: "Nine Ball",
+			artist: "Zach Bryan",
+			src: "/music/Zach Bryan - Nine Ball.mp3",
+			cover: "/favicon.png" // Using favicon as placeholder
+		}
+	];
+	
+	onMount(() => {
+		audio = new Audio(playlist[currentTrack].src);
+		audio.volume = volume;
+		
+		audio.addEventListener('loadedmetadata', () => {
+			duration = audio.duration;
+		});
+		
+		audio.addEventListener('timeupdate', () => {
+			currentTime = audio.currentTime;
+		});
+		
+		audio.addEventListener('ended', () => {
+			nextTrack();
+		});
+	});
+	
+	function togglePlay() {
+		if (isPlaying) {
+			audio.pause();
+		} else {
+			audio.play();
+		}
+		isPlaying = !isPlaying;
+	}
+	
+	function previousTrack() {
+		currentTrack = currentTrack > 0 ? currentTrack - 1 : playlist.length - 1;
+		loadTrack();
+	}
+	
+	function nextTrack() {
+		currentTrack = currentTrack < playlist.length - 1 ? currentTrack + 1 : 0;
+		loadTrack();
+	}
+	
+	function loadTrack() {
+		audio.src = playlist[currentTrack].src;
+		if (isPlaying) {
+			audio.play();
+		}
+	}
+	
+	function seekTo(event) {
+		const progressBar = event.currentTarget;
+		const clickX = event.offsetX;
+		const width = progressBar.offsetWidth;
+		const newTime = (clickX / width) * duration;
+		audio.currentTime = newTime;
+	}
+	
+	function formatTime(time) {
+		const minutes = Math.floor(time / 60);
+		const seconds = Math.floor(time % 60);
+		return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+	}
+	
+	$: progressPercent = duration ? (currentTime / duration) * 100 : 0;
+</script>
+
+<section class="hyves-player" aria-label="Muziekspeler">
+	<!-- Hyves-style Music Player -->
+	<article class="hyves-container">
+		
+		<!-- Main player area -->
+		<main class="hyves-main">
+			<!-- Track info area -->
+			<header class="track-display">
+				<div class="album-art">
+					<img 
+						src={playlist[currentTrack].cover} 
+						alt="Album cover voor {playlist[currentTrack].title} van {playlist[currentTrack].artist}" 
+						class="hyves-cover"
+					/>
+				</div>
+				<div class="track-details">
+					<h3 class="song-title">{playlist[currentTrack].title}</h3>
+					<p class="artist-name">{playlist[currentTrack].artist}</p>
+					<time class="time-info" aria-live="polite">
+						{formatTime(currentTime)} / {formatTime(duration)}
+					</time>
+				</div>
+			</header>
+			
+			<!-- Controls and progress -->
+			<section class="player-controls" aria-label="Afspeelbesturingen">
+				<!-- Progress bar -->
+				<button 
+					class="hyves-progress-bar" 
+					on:click={seekTo}
+					aria-label="Voortgang: {Math.round(progressPercent)}% - klik om naar positie te springen"
+					role="slider"
+					aria-valuemin="0"
+					aria-valuemax="100"
+					aria-valuenow={Math.round(progressPercent)}
+				>
+					<div class="hyves-progress-fill" style="width: {progressPercent}%" aria-hidden="true"></div>
+				</button>
+				
+				<!-- Control buttons -->
+				<div class="hyves-buttons" role="group" aria-label="Afspeelknoppen">
+					<button 
+						class="hyves-btn" 
+						on:click={previousTrack} 
+						title="Vorige track"
+						aria-label="Vorige track afspelen"
+					>
+						◀◀
+					</button>
+					
+					<button 
+						class="hyves-play-btn" 
+						on:click={togglePlay} 
+						title={isPlaying ? 'Pauze' : 'Afspelen'}
+						aria-label={isPlaying ? 'Muziek pauzeren' : 'Muziek afspelen'}
+						aria-pressed={isPlaying}
+					>
+						{isPlaying ? '⏸' : '▶'}
+					</button>
+					
+					<button 
+						class="hyves-btn" 
+						on:click={nextTrack} 
+						title="Volgende track"
+						aria-label="Volgende track afspelen"
+					>
+						▶▶
+					</button>
+					
+					<div class="volume-section" role="group" aria-label="Volume instelling">
+						<span class="volume-label" aria-hidden="true">♫</span>
+						<label for="volume-slider" class="visually-hidden">Volume</label>
+						<input 
+							id="volume-slider"
+							type="range" 
+							min="0" 
+							max="1" 
+							step="0.01" 
+							bind:value={volume}
+							on:input={() => audio.volume = volume}
+							class="hyves-volume"
+							aria-label="Volume: {Math.round(volume * 100)}%"
+						/>
+					</div>
+				</div>
+			</section>
+		</main>
+		
+		<!-- Footer with typical Hyves styling -->
+		<footer class="hyves-footer">
+			<button class="hyves-link" aria-label="Bekijk meer muziek">Meer muziek ►</button>
+		</footer>
+	</article>
+</section>
+
+<style>
+	/* Accessibility helpers */
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	/* Hyves-style Music Player */
+	.hyves-player {
+		max-width: 350px;
+		margin: 1rem auto;
+		font-family: Arial, sans-serif;
+		font-size: 11px;
+	}
+	
+	.hyves-container {
+		background: #ffffff;
+		border: 1px solid #cccccc;
+		border-radius: 5px;
+		overflow: hidden;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	}
+	
+	.hyves-main {
+		padding: 8px;
+		background: #f8f8f8;
+	}
+	
+	.track-display {
+		display: flex;
+		gap: 8px;
+		margin-bottom: 8px;
+		background: white;
+		padding: 6px;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+	}
+	
+	.album-art {
+		flex-shrink: 0;
+	}
+	
+	.hyves-cover {
+		width: 40px;
+		height: 40px;
+		border: 1px solid #ccc;
+		object-fit: cover;
+	}
+	
+	.track-details {
+		flex: 1;
+		min-width: 0;
+	}
+	
+	.song-title {
+		font-weight: bold;
+		color: #333;
+		font-size: 11px;
+		margin: 0 0 2px 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		line-height: 1.2;
+	}
+	
+	.artist-name {
+		color: #666;
+		font-size: 10px;
+		margin: 0 0 3px 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		line-height: 1.2;
+	}
+	
+	.time-info {
+		color: #999;
+		font-size: 9px;
+		font-family: monospace;
+	}
+	
+	.player-controls {
+		background: white;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		padding: 6px;
+	}
+	
+	.hyves-progress-bar {
+		width: 100%;
+		height: 6px;
+		background: #e0e0e0;
+		border: 1px inset #ccc;
+		margin-bottom: 6px;
+		cursor: pointer;
+		position: relative;
+		padding: 0;
+		display: block;
+	}
+	
+	.hyves-progress-bar:focus {
+		outline: 2px solid #0066cc;
+		outline-offset: 1px;
+	}
+	
+	.hyves-progress-fill {
+		height: 100%;
+		background: linear-gradient(to right, #0066cc, #0080ff);
+		transition: width 0.1s ease;
+	}
+	
+	.hyves-buttons {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+	}
+	
+	.hyves-btn, .hyves-play-btn {
+		background: linear-gradient(to bottom, #f0f0f0, #d8d8d8);
+		border: 1px outset #ccc;
+		color: #333;
+		cursor: pointer;
+		font-size: 10px;
+		padding: 2px 6px;
+		font-family: Arial, sans-serif;
+		transition: all 0.1s ease;
+	}
+	
+	.hyves-btn:hover, .hyves-play-btn:hover {
+		background: linear-gradient(to bottom, #f8f8f8, #e0e0e0);
+	}
+	
+	.hyves-btn:active, .hyves-play-btn:active {
+		border-style: inset;
+		background: linear-gradient(to bottom, #d8d8d8, #f0f0f0);
+	}
+	
+	.hyves-play-btn {
+		font-size: 12px;
+		padding: 3px 8px;
+		font-weight: bold;
+		color: #0066cc;
+	}
+	
+	.volume-section {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		margin-left: auto;
+	}
+	
+	.volume-label {
+		color: #666;
+		font-size: 10px;
+	}
+	
+	.hyves-volume {
+		width: 60px;
+		height: 4px;
+		background: #e0e0e0;
+		border: 1px inset #ccc;
+		outline: none;
+		cursor: pointer;
+	}
+	
+	.hyves-volume::-webkit-slider-thumb {
+		appearance: none;
+		width: 8px;
+		height: 12px;
+		background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+		border: 1px outset #ccc;
+		cursor: pointer;
+	}
+	
+	.hyves-footer {
+		background: #f0f0f0;
+		border-top: 1px solid #ddd;
+		padding: 3px 8px;
+		text-align: right;
+	}
+	
+	.hyves-link {
+		color: #0066cc;
+		font-size: 10px;
+		cursor: pointer;
+		text-decoration: none;
+		background: none;
+		border: none;
+		padding: 0;
+		font-family: Arial, sans-serif;
+	}
+	
+	.hyves-link:hover {
+		text-decoration: underline;
+	}
+	
+	.hyves-link:focus {
+		outline: 2px solid #0066cc;
+		outline-offset: 1px;
+	}
+	
+	/* Responsive adjustments */
+	@media (max-width: 400px) {
+		.hyves-player {
+			max-width: 100%;
+			margin: 1rem;
+		}
+		
+		.track-display {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+		
+		.hyves-cover {
+			width: 50px;
+			height: 50px;
+		}
+	}
+</style>
