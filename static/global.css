@@ -18,9 +18,8 @@
     --font-size-h2: clamp(1.5rem, 5vw, 3rem);
     
     /* Font Families */
-    --font-family-heading: "Freckle Face", system-ui;
-    --font-family-body: "Bricolage Grotesque", sans-serif;
-    
+    --font-family-body: Verdana, Geneva, sans-serif;
+
     /* Colors */
     --color-background: #E3E8C5;
     --color-heading: #e0e0e0;
@@ -63,7 +62,7 @@ html {
    Typography
    -------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-heading);
+    font-family: var(--font-family-body);
     font-weight: 400;
     font-style: normal;
     color: var(--color-heading);

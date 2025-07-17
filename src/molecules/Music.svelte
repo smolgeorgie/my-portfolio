@@ -89,40 +89,9 @@
 		
 		<!-- Main player area -->
 		<main class="hyves-main">
-			<!-- Track info area -->
-			<header class="track-display">
-				<div class="album-art">
-					<img 
-						src={playlist[currentTrack].cover} 
-						alt="Album cover voor {playlist[currentTrack].title} van {playlist[currentTrack].artist}" 
-						class="hyves-cover"
-					/>
-				</div>
-				<div class="track-details">
-					<h3 class="song-title">{playlist[currentTrack].title}</h3>
-					<p class="artist-name">{playlist[currentTrack].artist}</p>
-					<time class="time-info" aria-live="polite">
-						{formatTime(currentTime)} / {formatTime(duration)}
-					</time>
-				</div>
-			</header>
-			
-			<!-- Controls and progress -->
-			<section class="player-controls" aria-label="Afspeelbesturingen">
-				<!-- Progress bar -->
-				<button 
-					class="hyves-progress-bar" 
-					on:click={seekTo}
-					aria-label="Voortgang: {Math.round(progressPercent)}% - klik om naar positie te springen"
-					role="slider"
-					aria-valuemin="0"
-					aria-valuemax="100"
-					aria-valuenow={Math.round(progressPercent)}
-				>
-					<div class="hyves-progress-fill" style="width: {progressPercent}%" aria-hidden="true"></div>
-				</button>
-				
-				<!-- Control buttons -->
+			<!-- Top row: Controls on left, Track info on right -->
+			<div class="top-row">
+				<!-- Control buttons on the left -->
 				<div class="hyves-buttons" role="group" aria-label="Afspeelknoppen">
 					<button 
 						class="hyves-btn" 
@@ -130,7 +99,7 @@
 						title="Vorige track"
 						aria-label="Vorige track afspelen"
 					>
-						◀◀
+						◀
 					</button>
 					
 					<button 
@@ -149,31 +118,59 @@
 						title="Volgende track"
 						aria-label="Volgende track afspelen"
 					>
-						▶▶
+						▶
 					</button>
-					
-					<div class="volume-section" role="group" aria-label="Volume instelling">
-						<span class="volume-label" aria-hidden="true">♫</span>
-						<label for="volume-slider" class="visually-hidden">Volume</label>
-						<input 
-							id="volume-slider"
-							type="range" 
-							min="0" 
-							max="1" 
-							step="0.01" 
-							bind:value={volume}
-							on:input={() => audio.volume = volume}
-							class="hyves-volume"
-							aria-label="Volume: {Math.round(volume * 100)}%"
-						/>
-					</div>
 				</div>
-			</section>
+
+				<!-- Track info on the right -->
+				<div class="track-info-right">
+					<h3 class="song-title">{playlist[currentTrack].title}</h3>
+					<p class="artist-name">{playlist[currentTrack].artist}</p>
+					<time class="time-info" aria-live="polite">
+						{formatTime(currentTime)} / {formatTime(duration)}
+					</time>
+				</div>
+			</div>
+			
+			<!-- Bottom row: Volume on left, Progress bar on right -->
+			<div class="bottom-row">
+				<!-- Volume control on the left -->
+				<div class="volume-section" role="group" aria-label="Volume instelling">
+					<span class="volume-label" aria-hidden="true">♫</span>
+					<label for="volume-slider" class="visually-hidden">Volume</label>
+					<input 
+						id="volume-slider"
+						type="range" 
+						min="0" 
+						max="1" 
+						step="0.01" 
+						bind:value={volume}
+						on:input={() => audio.volume = volume}
+						class="hyves-volume"
+						aria-label="Volume: {Math.round(volume * 100)}%"
+					/>
+				</div>
+
+				<!-- Progress bar on the right -->
+				<div class="progress-section">
+					<button 
+						class="hyves-progress-bar" 
+						on:click={seekTo}
+						aria-label="Voortgang: {Math.round(progressPercent)}% - klik om naar positie te springen"
+						role="slider"
+						aria-valuemin="0"
+						aria-valuemax="100"
+						aria-valuenow={Math.round(progressPercent)}
+					>
+						<div class="hyves-progress-fill" style="width: {progressPercent}%" aria-hidden="true"></div>
+					</button>
+				</div>
+			</div>
 		</main>
 		
 		<!-- Footer with typical Hyves styling -->
 		<footer class="hyves-footer">
-			<button class="hyves-link" aria-label="Bekijk meer muziek">Meer muziek ►</button>
+			<button class="hyves-link" aria-label="Klik hier om alle liedjes te bekijken"> Bekijk alle liedjes ► </button>
 		</footer>
 	</article>
 </section>
@@ -213,9 +210,10 @@
 		background: #f8f8f8;
 	}
 	
-	.track-display {
+	.top-row {
 		display: flex;
-		gap: 8px;
+		align-items: flex-start;
+		gap: 12px;
 		margin-bottom: 8px;
 		background: white;
 		padding: 6px;
@@ -223,20 +221,20 @@
 		border-radius: 3px;
 	}
 	
-	.album-art {
-		flex-shrink: 0;
+	.bottom-row {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		background: white;
+		padding: 6px;
+		border: 1px solid #ddd;
+		border-radius: 3px;
 	}
 	
-	.hyves-cover {
-		width: 40px;
-		height: 40px;
-		border: 1px solid #ccc;
-		object-fit: cover;
-	}
-	
-	.track-details {
+	.track-info-right {
 		flex: 1;
 		min-width: 0;
+		text-align: left;
 	}
 	
 	.song-title {
@@ -266,11 +264,24 @@
 		font-family: monospace;
 	}
 	
-	.player-controls {
-		background: white;
-		border: 1px solid #ddd;
-		border-radius: 3px;
-		padding: 6px;
+	.hyves-buttons {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		flex-shrink: 0;
+	}
+	
+	.progress-section {
+		flex: 1;
+		min-width: 0;
+	}
+	
+	.volume-section {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		flex-shrink: 0;
+		min-width: 80px;
 	}
 	
 	.hyves-progress-bar {
@@ -278,7 +289,6 @@
 		height: 6px;
 		background: #e0e0e0;
 		border: 1px inset #ccc;
-		margin-bottom: 6px;
 		cursor: pointer;
 		position: relative;
 		padding: 0;
@@ -294,12 +304,6 @@
 		height: 100%;
 		background: linear-gradient(to right, #0066cc, #0080ff);
 		transition: width 0.1s ease;
-	}
-	
-	.hyves-buttons {
-		display: flex;
-		align-items: center;
-		gap: 4px;
 	}
 	
 	.hyves-btn, .hyves-play-btn {
@@ -327,13 +331,6 @@
 		padding: 3px 8px;
 		font-weight: bold;
 		color: #0066cc;
-	}
-	
-	.volume-section {
-		display: flex;
-		align-items: center;
-		gap: 4px;
-		margin-left: auto;
 	}
 	
 	.volume-label {
@@ -393,15 +390,25 @@
 			margin: 1rem;
 		}
 		
-		.track-display {
+		.top-row {
 			flex-direction: column;
 			align-items: center;
 			text-align: center;
+			gap: 8px;
 		}
 		
-		.hyves-cover {
-			width: 50px;
-			height: 50px;
+		.bottom-row {
+			flex-direction: column;
+			gap: 8px;
+		}
+		
+		.progress-section,
+		.volume-section {
+			width: 100%;
+		}
+		
+		.hyves-volume {
+			width: 100px;
 		}
 	}
 </style>

@@ -4,12 +4,17 @@
 
 <main>
     <section class="intro">
-        <h2> Profiel </h2>
+        <h2> Ilona van Oosbree </h2>
         <ul>
             <li> <b> Naam: </b> Ilona </li>
             <li> <b> Leeftijd: </b> 24 jaar </li>
-            <li> <b> Woonplaats: </b> Regio Utrecht </li>
+            <li> <b> Woonplaats: </b> Regio Utrecht en Rotterdam </li>
             <li> <b> Opleiding: </b> HBO AD Frontend Design and Development </li>
+        </ul>
+        <ul> 
+            <li> <b> Bedrijf: </b> Paer Studio </li>
+            <li> <b> Functie: </b> Frontend Developer </li>
+            <li> <b> Passies: </b> Programmeren </li>
         </ul>
         
         <!-- Nostalgic Music Player -->
