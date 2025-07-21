@@ -220,7 +220,8 @@
 		padding: 6px;
 		border: 1px solid #ddd;
 		border-radius: 3px;
-		background: grey;
+		background: #e0dcdc;
+		background: linear-gradient(180deg,rgba(224, 220, 220, 1) 0%, rgba(237, 237, 237, 1) 19%, rgba(184, 182, 183, 1) 58%, rgba(143, 143, 143, 1) 96%);
 	}
 	
 	.bottom-row {

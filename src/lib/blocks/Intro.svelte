@@ -19,7 +19,7 @@
             <li> <b> Passies: </b> Programmeren, Designen, Fotografie </li>
         </ul>
         </div>
-    </section>
+</section>
 
 <style>
 
@@ -54,8 +54,10 @@
         color: #333;
         padding-bottom: 0.5rem;
         margin-bottom: 1.5rem;
-        background: #e9f3fc;;
+        background: #ffffff;
+        background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 19%, rgba(225, 237, 250, 1) 58%, rgba(233, 243, 252, 1) 96%);
         padding: 0.5rem 0.5rem 0.5rem 1rem;
+        border-bottom: 1px solid #ccc;
         margin: 0;
     }
 </style>
