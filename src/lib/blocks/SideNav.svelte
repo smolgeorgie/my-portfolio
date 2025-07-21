@@ -22,6 +22,7 @@
         ul {
 
             list-style: none;
+            padding: 0;
 
             a {
                 text-decoration: none;

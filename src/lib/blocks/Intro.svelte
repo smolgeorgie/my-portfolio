@@ -2,9 +2,9 @@
     import Music from '../molecules/Music.svelte';
 </script>
 
-<main>
-    <section class="intro">
-        <h2> Feit </h2>
+<section class="intro-container">
+    <h2> Feit </h2>
+        <div class="intro">
         <Music />
         <ul>
             <li> <b> Naam: </b> Ilona </li>
@@ -18,18 +18,21 @@
             <li> <b> Functie: </b> Frontend Developer </li>
             <li> <b> Passies: </b> Programmeren </li>
         </ul>
-        
-
+        </div>
     </section>
-</main>
 
 <style>
-    .intro {
-        padding: .1rem 1rem .1rem 1rem;
+
+    .intro-container {
         max-width: 800px;
-        margin: 0 auto;
+        padding: 0;
         outline: 2px solid #ccc;
         border-radius: 8px;
+    }
+    .intro {
+        background: #f9f9f9;
+        border-radius: 8px;
+        padding: 0 1rem 1rem 1rem;
     }
     
     ul {
@@ -47,5 +50,8 @@
         color: #333;
         padding-bottom: 0.5rem;
         margin-bottom: 1.5rem;
+        background: #e9f3fc;;
+        padding: 0.5rem;
+        margin: 0;
     }
 </style>
