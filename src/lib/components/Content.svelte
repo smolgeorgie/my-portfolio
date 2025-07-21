@@ -5,13 +5,31 @@
     import { viewMode } from "$lib/stores.js";
 </script>
 
-<div class="content-container" class:desktop-on-mobile={$viewMode === 'desktop'}>
-    <SideNav />
-    <Intro />
-    <MyWork />
-</div>
+<section class="content-frame">
+<h1>Ilona van Oosbree</h1>
+     <div class="content-container" class:desktop-on-mobile={$viewMode === 'desktop'}>
+        <SideNav />
+        <Intro />
+        <MyWork />
+    </div>
+</section>
 
 <style>
+    h1{
+        text-align: left;
+        padding: 0;
+        margin: 0.5rem 0 0.5rem 1.5rem;
+        font-size: 2rem;
+        font-weight: lighter;
+        color: #577ddb;
+    }
+
+    .content-frame {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin: 1rem;
+    }
+
     .content-container {
         display: grid;
         grid-template-columns: 1fr 2fr 2fr;

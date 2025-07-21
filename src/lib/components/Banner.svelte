@@ -16,9 +16,9 @@
                 <li> <a href="#Name"> Ilona </a></li>
                 <li> <a href="#Status"> Online </a></li>
                 <li> <a href="#Theme"> Verander thema </a></li>
-                <li> <button on:click={toggleView} class="view-toggle"> {$viewMode === 'mobile' ? 'Desktop View' : 'Mobile View'} </button></li>
+                <!-- <li> <button on:click={toggleView} class="view-toggle"> {$viewMode === 'mobile' ? 'Desktop View' : 'Mobile View'} </button></li> -->
             </ul>
-            <!-- <img src="/images/ilona.png" alt="Logo" class="logo"> -->
+            <img src="/images/ilona.jpg" alt="Logo" class="logo" height="40" width="40">
         </div>
         </article>
     </div>
@@ -45,7 +45,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
+    padding-right: 1rem;
     background: #FED994;
     background: linear-gradient(179deg,rgba(254, 217, 148, 1) 1%, rgba(252, 221, 159, 1) 33%, rgba(255, 199, 94, 1) 95%, rgba(254, 217, 148, 1) 100%);
     border-radius: 3px;
@@ -64,14 +64,15 @@ nav {
         margin: 0;
 
         a {
-            border-right: 2px solid black;
+            font-size: 10px;
+            border-right: 1px solid black;
             padding-right: 1rem;
             text-decoration: none;
             color: black;
             cursor: pointer;
         }
 
-        .view-toggle {
+        /* .view-toggle {
             background: none;
             border: none;
             border-right: 2px solid black;
@@ -84,10 +85,9 @@ nav {
             &:hover {
                 text-decoration: underline;
             }
-        }
+        } */
     }
 }
-
 .top-nav {
 
     background: #6F98BA;

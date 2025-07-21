@@ -9,14 +9,14 @@
         <ul>
             <li> <b> Naam: </b> Ilona </li>
             <li> <b> Leeftijd: </b> 24 </li>
-            <li> <b> Woonplaats: </b> Regio Utrecht en Rotterdam </li>
-            <li> <b> Opleiding: </b> HBO AD Frontend Design and Development </li>
-            <li> <b> Connectie: </b> [ilonavanoosbree linkedin] </li>
+            <li> <b> Woonplaats: </b> Amsterdam & Rotterdam </li>
         </ul>
         <ul> 
             <li> <b> Bedrijf: </b> Paer Studio </li>
             <li> <b> Functie: </b> Frontend Developer </li>
-            <li> <b> Passies: </b> Programmeren </li>
+            <li> <b> MBO / HBO / Universiteit: </b> HBO Frontend Design and Development & MBO Marketing, Journalistiek en Communicatie </li>
+            <li> <b> Scholen </b> Hogeschool van Amsterdam & MBO College Utrecht </li>
+            <li> <b> Passies: </b> Programmeren, Designen, Fotografie </li>
         </ul>
         </div>
     </section>
@@ -42,7 +42,7 @@
     
     li {
         margin-bottom: 0.2rem;
-        font-size: 1.1rem;
+        font-size: 16px;
     }
     
     h2 {
