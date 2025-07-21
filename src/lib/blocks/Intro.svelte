@@ -39,6 +39,11 @@
         padding: 0;
         margin-bottom: 2rem;
     }
+
+    ul:first-of-type {
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #7dc382;
+    }
     
     li {
         margin-bottom: 0.2rem;
