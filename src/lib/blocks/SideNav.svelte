@@ -1,7 +1,7 @@
 
 <div class="side-nav">
     <div class="logo-container">
-        <img src="/images/ilona2.jpg" alt="Logo" class="logo" width="150" height="150">
+        <img src="/images/ilona1.jpg" alt="Logo" class="logo" width="150" height="150">
     </div>
     <ul>
         <li> <a href="#Email"> Email </a></li>
