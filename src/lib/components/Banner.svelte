@@ -1,5 +1,11 @@
 <script>
     import { IconLib } from "$lib/index.js"
+    
+    let viewMode = 'mobile'; 
+    
+    function toggleView() {
+        viewMode = viewMode === 'mobile' ? 'desktop' : 'mobile';
+    }
 </script>
 
 <nav> 
@@ -11,6 +17,7 @@
                 <li> <a href="#Name"> Ilona </a></li>
                 <li> <a href="#Status"> Online </a></li>
                 <li> <a href="#Theme"> Verander thema </a></li>
+                <li> <button on:click={toggleView} class="view-toggle"> {viewMode === 'mobile' ? 'Desktop View' : 'Mobile View'} </button></li>
             </ul>
             <!-- <img src="/images/ilona.png" alt="Logo" class="logo"> -->
         </div>
@@ -63,6 +70,21 @@ nav {
             text-decoration: none;
             color: black;
             cursor: pointer;
+        }
+
+        .view-toggle {
+            background: none;
+            border: none;
+            border-right: 2px solid black;
+            padding-right: 1rem;
+            color: black;
+            cursor: pointer;
+            font-size: inherit;
+            font-family: inherit;
+            
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
