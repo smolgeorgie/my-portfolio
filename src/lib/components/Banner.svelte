@@ -1,10 +1,9 @@
 <script>
     import { IconLib } from "$lib/index.js"
-    
-    let viewMode = 'mobile'; 
+    import { viewMode } from "$lib/stores.js"
     
     function toggleView() {
-        viewMode = viewMode === 'mobile' ? 'desktop' : 'mobile';
+        viewMode.update(mode => mode === 'mobile' ? 'desktop' : 'mobile');
     }
 </script>
 
@@ -17,7 +16,7 @@
                 <li> <a href="#Name"> Ilona </a></li>
                 <li> <a href="#Status"> Online </a></li>
                 <li> <a href="#Theme"> Verander thema </a></li>
-                <li> <button on:click={toggleView} class="view-toggle"> {viewMode === 'mobile' ? 'Desktop View' : 'Mobile View'} </button></li>
+                <li> <button on:click={toggleView} class="view-toggle"> {$viewMode === 'mobile' ? 'Desktop View' : 'Mobile View'} </button></li>
             </ul>
             <!-- <img src="/images/ilona.png" alt="Logo" class="logo"> -->
         </div>
