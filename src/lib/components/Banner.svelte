@@ -20,7 +20,7 @@
         <ul> 
             <li> <a href="#Home"> Home </a></li>
             <li> <a href="#Profile"> Mijn profiel </a></li>
-            <li> <a href="#Work"> Mijn werk [amount] </a></li>
+            <li> <a href="#Work"> Mijn werk </a></li>
             <li> <a href="#Foto"> Foto </a></li>
             <li> <a href="#Blogs"> Blogs </a></li>
         </ul>
@@ -42,7 +42,7 @@ nav {
     margin: 0;
     background: #FED994;
     background: linear-gradient(179deg,rgba(254, 217, 148, 1) 1%, rgba(252, 221, 159, 1) 33%, rgba(255, 199, 94, 1) 95%, rgba(254, 217, 148, 1) 100%);
-    border-radius: 5px;
+    border-radius: 3px;
     border: 1px solid #d3b275bc;
 }
 
@@ -55,6 +55,7 @@ nav {
         display: flex;
         gap: 1rem;
         list-style: none;
+        margin: 0;
 
         a {
             border-right: 2px solid black;
@@ -62,6 +63,32 @@ nav {
             text-decoration: none;
             color: black;
             cursor: pointer;
+        }
+    }
+}
+
+.top-nav {
+
+    background: #6F98BA;
+    background: linear-gradient(180deg,rgba(111, 152, 186, 1) 0%, rgba(159, 178, 201, 1) 19%, rgba(111, 152, 186, 1) 45%, rgba(111, 152, 186, 1) 96%);
+    border-radius: 3px;
+    ul {
+        display: flex;
+        gap: .5rem;
+        list-style: none;
+        padding: .4rem .4rem .4rem .8rem;
+        margin-top: .2em;
+
+        a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            padding: .2rem .4rem;
+
+            &:hover {
+                box-shadow: inset 3px 18px 12px 0px rgba(0,0,0,0.1);
+                border-radius: 2px;
+            }
         }
     }
 }
