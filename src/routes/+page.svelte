@@ -1,10 +1,8 @@
 <script>
     import Banner from '../lib/components/Banner.svelte';
-    import SideNav from '../lib/components/SideNav.svelte';
-    import Intro from '../lib/components/Intro.svelte';
+    import Content from '../lib/components/Content.svelte';
 </script>
 
 
 <Banner />
-<SideNav />
-<Intro />
+<Content />

@@ -12,6 +12,10 @@
 <style> 
     .side-nav {
 
+        display: flex;
+        flex-direction: column;
+        background: #94bce4;
+
         ul {
 
             list-style: none;
