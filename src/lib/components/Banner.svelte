@@ -12,7 +12,7 @@
                 <li> <a href="#Status"> Online </a></li>
                 <li> <a href="#Theme"> Verander thema </a></li>
             </ul>
-            <img src="/images/ilona.png" alt="Logo" class="logo">
+            <!-- <img src="/images/ilona.png" alt="Logo" class="logo"> -->
         </div>
         </article>
     </div>
