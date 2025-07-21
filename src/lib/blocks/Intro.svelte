@@ -30,7 +30,6 @@
         border-radius: 8px;
     }
     .intro {
-        background: #f9f9f9;
         border-radius: 8px;
         padding: 0 1rem 1rem 1rem;
     }
