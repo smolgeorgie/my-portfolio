@@ -1,5 +1,5 @@
 <script>
-    import Music from '../molecules/Music.svelte';
+    import Music from '../lib/molecules/Music.svelte';
 </script>
 
 <main>
