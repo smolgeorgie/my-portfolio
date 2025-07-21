@@ -1,22 +1,26 @@
 <script>
     import Music from '../molecules/Music.svelte';
+    import { currentLanguage, translations } from "$lib/stores.js";
+    
+    $: t = translations[$currentLanguage];
 </script>
 
 <section class="intro-container">
-    <h2> Feit </h2>
+    <h2> {t.facts} </h2>
         <div class="intro">
         <Music />
         <ul>
-            <li> <b> Naam: </b> Ilona </li>
-            <li> <b> Leeftijd: </b> 24 </li>
-            <li> <b> Woonplaats: </b> Amsterdam & Rotterdam </li>
+            <li> <img src="/gifs/smiley_hollandyell.gif" alt="Smiley Holland YelL emoji" class="smiley"> </li>
+            <li> <b> {t.name_label} </b> {t.name} </li>
+            <li> <b> {t.age} </b> 24 </li>
+            <li> <b> {t.location} </b> {t.amsterdam_rotterdam} </li>
         </ul>
         <ul> 
-            <li> <b> Bedrijf: </b> Paer Studio </li>
-            <li> <b> Functie: </b> Frontend Developer </li>
-            <li> <b> MBO / HBO / Universiteit: </b> HBO Frontend Design and Development & MBO Marketing, Journalistiek en Communicatie </li>
-            <li> <b> Scholen </b> Hogeschool van Amsterdam & MBO College Utrecht </li>
-            <li> <b> Passies: </b> Programmeren, Designen, Fotografie </li>
+            <li> <b> {t.company} </b> {t.paer_studio} </li>
+            <li> <b> {t.position} </b> {t.frontend_developer} </li>
+            <li> <b> {t.education} </b> {t.education_full} </li>
+            <li> <b> {t.schools} </b> {t.schools_full} </li>
+            <li> <b> {t.passions} </b> {t.passions_list} </li>
         </ul>
         </div>
 </section>

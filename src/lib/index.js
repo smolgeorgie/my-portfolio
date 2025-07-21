@@ -7,4 +7,4 @@ export { default as Intro } from './blocks/Intro.svelte';
 export { default as MyWork } from './blocks/MyWork.svelte';
 export { default as SideNav } from './blocks/SideNav.svelte';
 export { default as Music } from './molecules/Music.svelte'; // Fixed case
-export { viewMode } from './stores.js';
+export { viewMode, currentLanguage, translations } from './stores.js';

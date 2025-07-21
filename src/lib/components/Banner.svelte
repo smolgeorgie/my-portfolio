@@ -1,10 +1,16 @@
 <script>
     import { IconLib } from "$lib/index.js"
-    import { viewMode } from "$lib/stores.js"
+    import { viewMode, currentLanguage, translations } from "$lib/stores.js"
     
     function toggleView() {
         viewMode.update(mode => mode === 'mobile' ? 'desktop' : 'mobile');
     }
+    
+    function toggleLanguage() {
+        currentLanguage.update(lang => lang === 'nl' ? 'en' : 'nl');
+    }
+    
+    $: t = translations[$currentLanguage];
 </script>
 
 <nav> 
@@ -13,10 +19,11 @@
             <IconLib name="logo" size="2rem" />
         <div class="banner-links">
             <ul>
-                <li> <a href="#Name"> Ilona </a></li>
-                <li> <a href="#Status"> Online </a></li>
-                <li> <a href="#Theme"> Verander thema </a></li>
-                <!-- <li> <button on:click={toggleView} class="view-toggle"> {$viewMode === 'mobile' ? 'Desktop View' : 'Mobile View'} </button></li> -->
+                <li> <a href="#Name"> {t.name} </a></li>
+                <li> <a href="#Status"> {t.status} </a></li>
+                <li> <a href="#Theme"> {t.changeTheme} </a></li>
+                <li> <button on:click={toggleLanguage} class="view-toggle"> {t.changeLanguage} </button></li>
+                <li> <button on:click={toggleView} class="view-toggle"> {$viewMode === 'mobile' ? 'Desktop View' : 'Mobile View'} </button></li>
             </ul>
             <img src="/images/ilona.jpg" alt="Logo" class="logo" height="40" width="40">
         </div>
@@ -24,11 +31,11 @@
     </div>
     <div class="top-nav">
         <ul> 
-            <li> <a href="#Home"> Home </a></li>
-            <li> <a href="#Profile"> Mijn profiel </a></li>
-            <li> <a href="#Work"> Mijn werk </a></li>
-            <li> <a href="#Foto"> Foto </a></li>
-            <li> <a href="#Blogs"> Blogs </a></li>
+            <li> <a href="#Home"> {t.home} </a></li>
+            <li> <a href="#Profile"> {t.profile} </a></li>
+            <li> <a href="#Work"> {t.work} </a></li>
+            <li> <a href="#Foto"> {t.photo} </a></li>
+            <li> <a href="#Blogs"> {t.blogs} </a></li>
         </ul>
     </div>
 </nav>
