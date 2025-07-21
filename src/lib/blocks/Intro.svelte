@@ -51,7 +51,7 @@
         padding-bottom: 0.5rem;
         margin-bottom: 1.5rem;
         background: #e9f3fc;;
-        padding: 0.5rem;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
         margin: 0;
     }
 </style>
