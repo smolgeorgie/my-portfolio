@@ -5,16 +5,24 @@
     import { viewMode } from "$lib/stores.js";
 </script>
 
-<section class="content-frame">
-<h1>Ilona van Oosbree</h1>
-     <div class="content-container" class:desktop-on-mobile={$viewMode === 'desktop'}>
-        <SideNav />
-        <Intro />
-        <MyWork />
-    </div>
-</section>
+<div class="page-wrapper">
+    <section class="content-frame">
+    <h1>Ilona van Oosbree</h1>
+         <div class="content-container" class:desktop-on-mobile={$viewMode === 'desktop'}>
+            <SideNav />
+            <Intro />
+            <MyWork />
+        </div>
+    </section>
+</div>
 
 <style>
+    .page-wrapper {
+        max-width: 1492px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
     h1{
         text-align: left;
         padding: 0;

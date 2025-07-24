@@ -14,29 +14,31 @@
 </script>
 
 <nav> 
-    <div class="banner">
-        <article class="banner-content">
-            <IconLib name="logo" size="2rem" />
-        <div class="banner-links">
-            <ul>
-                <li> <a href="#Name"> {t.name} </a></li>
-                <li> <a href="#Status"> {t.status} </a></li>
-                <li> <a href="#Theme"> {t.changeTheme} </a></li>
-                <li> <button on:click={toggleLanguage} class="view-toggle"> {t.changeLanguage} </button></li>
-                <li> <button on:click={toggleView} class="view-toggle"> {$viewMode === 'mobile' ? 'Desktop View' : 'Mobile View'} </button></li>
-            </ul>
-            <img src="/images/ilona.jpg" alt="Logo" class="logo" height="40" width="40">
+    <div class="nav-wrapper">
+        <div class="banner">
+            <article class="banner-content">
+                <IconLib name="logo" size="2rem" />
+            <div class="banner-links">
+                <ul>
+                    <li> <a href="#Name"> {t.name} </a></li>
+                    <li> <a href="#Status"> {t.status} </a></li>
+                    <li> <a href="#Theme"> {t.changeTheme} </a></li>
+                    <li> <button on:click={toggleLanguage} class="view-toggle"> {t.changeLanguage} </button></li>
+                    <li> <button on:click={toggleView} class="view-toggle"> {$viewMode === 'mobile' ? 'Desktop View' : 'Mobile View'} </button></li>
+                </ul>
+                <img src="/images/ilona.jpg" alt="Logo" class="logo" height="40" width="40">
+            </div>
+            </article>
         </div>
-        </article>
-    </div>
-    <div class="top-nav">
-        <ul> 
-            <li> <a href="#Home"> {t.home} </a></li>
-            <li> <a href="#Profile"> {t.profile} </a></li>
-            <li> <a href="#Work"> {t.work} </a></li>
-            <li> <a href="#Foto"> {t.photo} </a></li>
-            <li> <a href="#Blogs"> {t.blogs} </a></li>
-        </ul>
+        <div class="top-nav">
+            <ul> 
+                <li> <a href="#Home"> {t.home} </a></li>
+                <li> <a href="#Profile"> {t.profile} </a></li>
+                <li> <a href="#Work"> {t.work} </a></li>
+                <li> <a href="#Foto"> {t.photo} </a></li>
+                <li> <a href="#Blogs"> {t.blogs} </a></li>
+            </ul>
+        </div>
     </div>
 </nav>
     
@@ -46,6 +48,12 @@
 nav {
     margin: 0;
     padding: 0;
+}
+
+.nav-wrapper {
+    max-width: 1492px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .banner-content {
