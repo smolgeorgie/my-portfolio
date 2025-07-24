@@ -35,7 +35,10 @@ export const translations = {
         frontend_developer: 'Frontend Developer',
         education_full: 'HBO Frontend Design and Development & MBO Marketing, Journalistiek en Communicatie',
         schools_full: 'Hogeschool van Amsterdam & MBO College Utrecht',
-        passions_list: 'Programmeren, Designen, Fotografie'
+        passions_list: 'Programmeren, Designen, Fotografie',
+
+        // MyWork section
+        mywork: 'Mijn werk'
     },
     en: {
         // Header
@@ -68,6 +71,10 @@ export const translations = {
         frontend_developer: 'Frontend Developer',
         education_full: 'Frontend Design and Development & Marketing, Journalism and Communication',
         schools_full: 'Amsterdam University of Applied Sciences & Utrecht College',
-        passions_list: 'Programming, Design, Photography'
+        passions_list: 'Programming, Design, Photography',
+
+        // MyWork section
+        mywork: 'My work'
+
     }
 };
