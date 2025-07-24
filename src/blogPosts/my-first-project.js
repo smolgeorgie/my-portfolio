@@ -8,7 +8,7 @@ export const blogPost = {
         nl: "Een beschrijving van mijn eerste webontwikkelingsproject waar ik veel heb geleerd over frontend ontwikkeling.",
         en: "A description of my first web development project where I learned a lot about frontend development."
     },
-    image: "/images/ilona.jpg",
+    image: "/images/cool-darth.webp",
     date: "2024-01-15",
     content: {
         nl: `

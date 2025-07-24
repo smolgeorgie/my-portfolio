@@ -8,7 +8,7 @@ export const blogPost = {
         nl: "Mijn persoonlijke portfolio gebouwd met SvelteKit, inclusief responsive design en internationalisatie.",
         en: "My personal portfolio built with SvelteKit, including responsive design and internationalization."
     },
-    image: "/images/ilona2.jpg",
+    image: "/images/cool-darth.webp",
     date: "2024-07-20",
     content: {
         nl: `

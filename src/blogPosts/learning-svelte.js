@@ -8,7 +8,7 @@ export const blogPost = {
         nl: "Mijn ervaring met het leren van Svelte en waarom ik het een geweldige framework vind voor moderne webontwikkeling.",
         en: "My experience learning Svelte and why I think it's a great framework for modern web development."
     },
-    image: "/images/ilona.jpg",
+    image: "/images/cool-darth.webp",
     date: "2024-06-10",
     content: {
         nl: `
