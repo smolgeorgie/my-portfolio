@@ -51,7 +51,7 @@ nav {
 }
 
 .nav-wrapper {
-    max-width: 1492px;
+    max-width: 1500px;
     margin: 0 auto;
     width: 100%;
 }
