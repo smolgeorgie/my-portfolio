@@ -42,7 +42,7 @@
         display: grid;
         grid-template-columns: 1fr 2fr 2fr;
         gap: 1rem;
-        height: 100vh;
+        height: auto;
         padding: 1rem;
         box-sizing: border-box;
     }
@@ -60,7 +60,7 @@
             grid-template-rows: none;
             font-size: 0.8rem;
             overflow-x: auto;
-            height: 100vh;
+            height: auto;
         }
     }
 </style>
