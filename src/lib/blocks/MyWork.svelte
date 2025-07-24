@@ -121,17 +121,82 @@
     }
 
     /* Mobile responsiveness */
+    @media (max-width: 1200px) {
+        .blog-posts-grid {
+            gap: 0.8rem;
+            padding: 0 0.8rem 0.8rem 0.8rem;
+        }
+        
+        .blog-post-title {
+            font-size: 0.85rem;
+        }
+        
+        .blog-post-date {
+            font-size: 0.6rem;
+        }
+    }
+
     @media (max-width: 1073px) {
         .blog-posts-grid {
             grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            gap: 0.8rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .blog-posts-grid {
+            padding: 0 0.7rem 0.7rem 0.7rem;
+        }
+        
+        h2 {
+            padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+            font-size: 1.4rem;
         }
     }
     
     @media (max-width: 921px) {
         .blog-posts-grid {
             grid-template-columns: 1fr;
+            gap: 0.8rem;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .blog-posts-grid {
+            padding: 0 0.6rem 0.6rem 0.6rem;
+            gap: 0.6rem;
+        }
+        
+        .blog-post-title {
+            font-size: 0.8rem;
+        }
+        
+        .blog-post-date {
+            font-size: 0.55rem;
+        }
+        
+        h2 {
+            font-size: 1.3rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .blog-posts-grid {
+            padding: 0 1rem 1rem 1rem;
             gap: 1rem;
+        }
+        
+        .blog-post-title {
+            font-size: 0.9rem;
+        }
+        
+        .blog-post-date {
+            font-size: 0.65rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            padding: 0.5rem 0.5rem 0.5rem 1rem;
         }
     }
     
@@ -139,6 +204,20 @@
         .blog-posts-grid {
             grid-template-columns: 1fr;
             gap: 0.75rem;
+            padding: 0 0.8rem 0.8rem 0.8rem;
+        }
+        
+        .blog-post-title {
+            font-size: 0.85rem;
+        }
+        
+        .blog-post-date {
+            font-size: 0.6rem;
+        }
+        
+        h2 {
+            font-size: 1.3rem;
+            padding: 0.4rem 0.4rem 0.4rem 0.8rem;
         }
     }
     
@@ -146,10 +225,20 @@
         .blog-posts-grid {
             grid-template-columns: 1fr;
             gap: 0.5rem;
+            padding: 0 0.6rem 0.6rem 0.6rem;
         }
         
         .blog-post-title {
             font-size: 0.8rem;
+        }
+        
+        .blog-post-date {
+            font-size: 0.55rem;
+        }
+        
+        h2 {
+            font-size: 1.2rem;
+            padding: 0.3rem 0.3rem 0.3rem 0.6rem;
         }
     }
 </style>

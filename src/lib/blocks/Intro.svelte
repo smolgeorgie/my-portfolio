@@ -64,4 +64,83 @@
         border-bottom: 1px solid #ccc;
         margin: 0;
     }
+
+    @media (max-width: 1024px) {
+        .intro {
+            padding: 0 0.8rem 0.8rem 0.8rem;
+        }
+        
+        li {
+            font-size: 15px;
+            margin-bottom: 0.15rem;
+        }
+        
+        ul {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .intro {
+            padding: 0 0.6rem 0.6rem 0.6rem;
+        }
+        
+        li {
+            font-size: 14px;
+            margin-bottom: 0.1rem;
+        }
+        
+        h2 {
+            padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+            font-size: 1.4rem;
+        }
+        
+        ul {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .intro {
+            padding: 0 1rem 1rem 1rem;
+        }
+        
+        li {
+            font-size: 16px;
+            margin-bottom: 0.2rem;
+        }
+        
+        h2 {
+            padding: 0.5rem 0.5rem 0.5rem 1rem;
+            font-size: 1.5rem;
+        }
+        
+        ul {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .intro {
+            padding: 0 0.8rem 0.8rem 0.8rem;
+        }
+        
+        li {
+            font-size: 14px;
+            margin-bottom: 0.15rem;
+        }
+        
+        h2 {
+            padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+            font-size: 1.3rem;
+        }
+        
+        ul {
+            margin-bottom: 1.5rem;
+        }
+        
+        ul:first-of-type {
+            padding-bottom: 1rem;
+        }
+    }
 </style>
