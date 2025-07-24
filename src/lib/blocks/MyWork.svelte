@@ -121,9 +121,23 @@
     }
 
     /* Mobile responsiveness */
-    @media (max-width: 480px) {
+    @media (max-width: 1073px) {
         .blog-posts-grid {
             grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+    }
+    
+    @media (max-width: 921px) {
+        .blog-posts-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .blog-posts-grid {
+            grid-template-columns: 1fr;
             gap: 0.75rem;
         }
     }
