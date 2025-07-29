@@ -5,8 +5,8 @@ export const blogPost = {
         en: "Explanation Portfolio"
     },
     description: {
-        nl: "Mijn ervaring met het leren van Svelte en waarom ik het een geweldige framework vind voor moderne webontwikkeling.",
-        en: "My experience learning Svelte and why I think it's a great framework for modern web development."
+        nl: "Mijn persoonlijke portfolio gebouwd ter inspiratie van Hyves, en waarom ik voor dit design heb gekozen",
+        en: "My personal portfolio built as inspiration from Hyves, and why I chose this design."
     },
     image: "/images/cool-darth.webp",
     date: "2024-06-10",

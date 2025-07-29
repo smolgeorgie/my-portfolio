@@ -5,8 +5,8 @@ export const blogPost = {
         en: "Portfolio website"
     },
     description: {
-        nl: "Mijn persoonlijke portfolio gebouwd ter inspiratie met Hyves, en waarom ik voor dit design heb gekozen",
-        en: "My personal portfolio built as inspiration with Hyves, and why I chose this design."
+        nl: "Mijn persoonlijke portfolio gebouwd met SvelteKit, inclusief responsive design en internationalisatie.",
+        en: "My personal portfolio built with SvelteKit, including responsive design and internationalization."
     },
     image: "/images/cool-darth.webp",
     date: "2024-07-20",
