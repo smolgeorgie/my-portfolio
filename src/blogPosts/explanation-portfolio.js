@@ -50,8 +50,7 @@ export const blogPost = {
         <p>
             You could add friends, write your own bio, play your favorite music on your profile, and of course: <strong>leave scribbles</strong>. 
             If someone visited your profile, you could write a message there – a kind of public DM avant la lettre. 
-            And then you also had all those crazy dancing gifs, the games you played with each other (who still remembers WieWatWaar or Boerderijspel?) 
-            and the ability to fill your entire page with glitter, hearts and background music.
+            And then you also had all those crazy dancing gifs, the games you played with each other and the ability to fill your entire page with glitter, hearts and background music.
         </p>
         <h2>Why Hyves?</h2>
         <p>
