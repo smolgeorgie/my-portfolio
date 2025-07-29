@@ -1,5 +1,6 @@
 <script>
     import { currentLanguage } from '$lib/stores.js';
+    import Banner from '$lib/components/Banner.svelte';
     export let data;
     
     $: post = data.post;
@@ -8,6 +9,8 @@
 <svelte:head>
     <title>{post.title[$currentLanguage]} - Ilona van Oosbree</title>
 </svelte:head>
+
+<Banner />
 
 <div class="blog-post-page">
     <div class="blog-header">
@@ -92,6 +95,9 @@
         margin-top: 3rem;
         padding-top: 2rem;
         border-top: 1px solid #eee;
+        max-width: 800px;
+        margin: 3rem auto 0 auto;
+        padding: 2rem 1rem 0 1rem;
     }
     
     .back-link {
