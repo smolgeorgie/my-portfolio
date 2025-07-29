@@ -20,7 +20,7 @@
                 <IconLib name="logo" size="2rem" />
             <div class="banner-links">
                 <ul>
-                    <li> <a href="#Name"> {t.name} </a></li>
+                    <li> <a href="/"> {t.name} </a></li>
                     <li> <a href="#Status"> {t.status} </a></li>
                     <li> <a href="#Theme"> {t.changeTheme} </a></li>
                     <li> <button on:click={toggleLanguage} class="view-toggle"> {t.changeLanguage} </button></li>
@@ -32,8 +32,8 @@
         </div>
         <div class="top-nav">
             <ul> 
-                <li> <a href="#Home"> {t.home} </a></li>
-                <li> <a href="#Profile"> {t.profile} </a></li>
+                <li> <a href="/"> {t.home} </a></li>
+                <li> <a href="/"> {t.profile} </a></li>
                 <li> <a href="#Work"> {t.work} </a></li>
                 <li> <a href="#Foto"> {t.photo} </a></li>
                 <li> <a href="#Blogs"> {t.blogs} </a></li>
