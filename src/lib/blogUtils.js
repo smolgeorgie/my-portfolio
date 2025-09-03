@@ -1,5 +1,5 @@
-// Automatically import all blog posts from the blogPosts folder
-const blogModules = import.meta.glob('/src/blogPosts/*.js', { eager: true });
+// Automatically import all blog posts from the blog/[slug] folder
+const blogModules = import.meta.glob('/src/routes/blog/[slug]/*.js', { eager: true });
 
 export function getAllBlogPosts() {
     const posts = [];

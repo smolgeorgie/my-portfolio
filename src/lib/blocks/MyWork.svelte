@@ -1,30 +1,38 @@
 <script>
     import { currentLanguage, translations } from "$lib/stores.js";
-    import { getAllBlogPosts } from "$lib/blogUtils.js";
     
     $: t = translations[$currentLanguage];
-    $: blogPosts = getAllBlogPosts();
+       // Define your work items here
+       const workPages = [
+           {
+               id: 'portfolio',
+               title: {
+                   nl: 'Portfolio',
+                   en: 'Portfolio'
+               },
+               image: '/images/cool-darth.webp',
+               url: '/portfolio'
+           },
+           // Add more work items as needed
+       ];
 </script>
 
 <section class="work-wrapper">
     <h2>{t.mywork}</h2>
-    <ul class="blog-posts-grid">
-        {#each blogPosts as post (post.id)}
-            <li class="blog-post-item">
-                <article class="blog-post-card">
-                    <a href="/blog/{post.id}" class="blog-post-link">
-                        <img src={post.image} alt={post.title[$currentLanguage]} class="blog-post-image" />
-                    </a>
-                </article>
-                <h3 class="blog-post-title">
-                    <a href="/blog/{post.id}" class="title-link">{post.title[$currentLanguage]}</a>
-                </h3>
-                <time class="blog-post-date" datetime={post.date}>
-                    {new Date(post.date).toLocaleDateString($currentLanguage === 'nl' ? 'nl-NL' : 'en-US')}
-                </time>
-            </li>
-        {/each}
-    </ul>
+       <ul class="blog-posts-grid">
+           {#each workPages as page (page.id)}
+               <li class="blog-post-item">
+                   <article class="blog-post-card">
+                       <a href={page.url} class="blog-post-link">
+                           <img src={page.image} alt={page.title[$currentLanguage]} class="blog-post-image" />
+                       </a>
+                   </article>
+                   <h3 class="blog-post-title">
+                       <a href={page.url} class="title-link">{page.title[$currentLanguage]}</a>
+                   </h3>
+               </li>
+           {/each}
+       </ul>
 </section>
 
 <style>
@@ -111,15 +119,6 @@
         color: #577ddb;
     }
 
-    .blog-post-date {
-        font-size: 0.65rem;
-        color: #888;
-        font-style: italic;
-        margin: 0;
-        text-align: center;
-        display: block;
-    }
-
     /* Mobile responsiveness */
     @media (max-width: 1200px) {
         .blog-posts-grid {
@@ -131,9 +130,6 @@
             font-size: 0.85rem;
         }
         
-        .blog-post-date {
-            font-size: 0.6rem;
-        }
     }
 
     @media (max-width: 1073px) {
@@ -171,10 +167,6 @@
             font-size: 0.8rem;
         }
         
-        .blog-post-date {
-            font-size: 0.55rem;
-        }
-        
         h2 {
             font-size: 1.3rem;
         }
@@ -188,10 +180,6 @@
         
         .blog-post-title {
             font-size: 0.9rem;
-        }
-        
-        .blog-post-date {
-            font-size: 0.65rem;
         }
         
         h2 {
@@ -211,10 +199,6 @@
             font-size: 0.85rem;
         }
         
-        .blog-post-date {
-            font-size: 0.6rem;
-        }
-        
         h2 {
             font-size: 1.3rem;
             padding: 0.4rem 0.4rem 0.4rem 0.8rem;
@@ -231,10 +215,7 @@
         .blog-post-title {
             font-size: 0.8rem;
         }
-        
-        .blog-post-date {
-            font-size: 0.55rem;
-        }
+    
         
         h2 {
             font-size: 1.2rem;

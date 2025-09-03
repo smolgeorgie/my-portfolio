@@ -36,7 +36,7 @@
                 <li> <a href="/"> {t.profile} </a></li>
                 <li> <a href="#Work"> {t.work} </a></li>
                 <li> <a href="#Foto"> {t.photo} </a></li>
-                <li> <a href="#Blogs"> {t.blogs} </a></li>
+                <li> <a href="/blog"> {t.blogs} </a></li>
             </ul>
         </div>
     </div>
@@ -143,6 +143,9 @@ nav {
             padding: .2rem .4rem;
             font-size: clamp(10px, 2vw, 14px);
             white-space: nowrap;
+            pointer-events: auto;
+            position: relative;
+            z-index: 1;
 
             &:hover {
                 box-shadow: inset 3px 18px 12px 0px rgba(0,0,0,0.1);
