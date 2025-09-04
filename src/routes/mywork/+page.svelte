@@ -1,10 +1,12 @@
 <script>
+    import Banner from "$lib/components/Banner.svelte";
 	import { workPages } from "$lib/data/workPages.js";
 </script>
 
+<Banner />
 <section class="work-wrapper">
 	<h2>My Work</h2>
-	<ul class="blog-posts-grid">
+	<ul class="blog-posts-flex">
 		{#each workPages as work}
 			<li class="blog-post-item">
 				<article class="blog-post-card">
@@ -22,11 +24,18 @@
 
 <style>
 .work-wrapper {
-	max-width: 800px;
+	max-width: 90%;
 	padding: 0;
 	outline: 2px solid #ccc;
 	border-radius: 8px;
-	margin: 0 auto;
+	margin: 1rem auto;
+}
+
+/* Use a media query instead */
+@media (min-width: 1600px) {
+	.work-wrapper {
+		max-width: 1450px;
+	}
 }
 
 h2 {
@@ -39,9 +48,9 @@ h2 {
 	margin: 0;
 }
 
-.blog-posts-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+.blog-posts-flex {
+	display: flex;
+	flex-wrap: wrap;
 	gap: 1rem;
 	margin-top: 1rem;
 	list-style: none;
@@ -52,9 +61,14 @@ h2 {
 .blog-post-item {
 	display: flex;
 	flex-direction: column;
+	flex: 1 1 220px;
+
 }
 
 .blog-post-card {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 1;
 	background: white;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 	overflow: hidden;
@@ -77,7 +91,7 @@ h2 {
 
 .blog-post-image {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	object-fit: cover;
 	transition: transform 0.3s ease;
 }
@@ -98,9 +112,5 @@ h2 {
 	text-decoration: none;
 	color: #333;
 	transition: color 0.2s ease;
-}
-
-.title-link:hover {
-	color: #577ddb;
 }
 </style>
