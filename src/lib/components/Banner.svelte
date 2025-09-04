@@ -34,7 +34,7 @@
             <ul> 
                 <li> <a href="/"> {t.home} </a></li>
                 <li> <a href="/"> {t.profile} </a></li>
-                <li> <a href="#Work"> {t.work} </a></li>
+                <li> <a href="/mywork"> {t.work} </a></li>
                 <li> <a href="#Foto"> {t.photo} </a></li>
                 <li> <a href="/blog"> {t.blogs} </a></li>
             </ul>
