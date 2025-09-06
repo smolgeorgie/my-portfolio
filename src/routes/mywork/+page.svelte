@@ -6,7 +6,7 @@
 <Banner />
 <section class="work-wrapper">
 	<h2>My Work</h2>
-	<ul class="blog-posts-flex">
+	<ul class="blog-posts-grid">
 		{#each workPages as work}
 			<li class="blog-post-item">
 				<article class="blog-post-card">
@@ -49,27 +49,23 @@ h2 {
 	margin: 0;
 }
 
-.blog-posts-flex {
-	display: flex;
-	flex-wrap: wrap;
+.blog-posts-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 1rem;
 	margin-top: 1rem;
 	list-style: none;
 	padding: 0 1rem 1rem 1rem;
 	margin: 1rem 0 0 0;
+	justify-content: start;
 }
 
 .blog-post-item {
 	display: flex;
 	flex-direction: column;
-	flex: 1 1 220px;
-
 }
 
 .blog-post-card {
-	display: flex;
-	flex-direction: column;
-	flex-shrink: 1;
 	background: white;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 	overflow: hidden;
@@ -78,7 +74,7 @@ h2 {
 	margin-bottom: 0.5rem;
 	width: 100%;
 	height: 0;
-	padding-bottom: 100%; /* Ensures a square aspect ratio */
+	padding-bottom: 100%;
 	position: relative;
 }
 
