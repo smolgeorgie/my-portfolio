@@ -27,7 +27,6 @@
 
 <style>
 .work-wrapper {
-
 	max-width: 90%;
 	padding: 0;
 	outline: 2px solid #ccc;
@@ -77,6 +76,10 @@ h2 {
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 	aspect-ratio: 1;
 	margin-bottom: 0.5rem;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%; /* Ensures a square aspect ratio */
+	position: relative;
 }
 
 .blog-post-card:hover {
@@ -88,14 +91,19 @@ h2 {
 	text-decoration: none;
 	color: inherit;
 	display: block;
+	width: 100%;
 	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .blog-post-image {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	object-fit: cover;
 	transition: transform 0.3s ease;
+	display: block;
 }
 
 .blog-post-card:hover .blog-post-image {
