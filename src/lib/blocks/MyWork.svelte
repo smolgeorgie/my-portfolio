@@ -17,6 +17,9 @@
                    <h3 class="blog-post-title">
                        <a href={page.url} class="title-link">{page.title[$currentLanguage]}</a>
                    </h3>
+                   {#if page.tag}
+                       <span class="blog-post-tag">{page.tag}</span>
+                   {/if}
                </li>
            {/each}
        </ul>
@@ -208,5 +211,17 @@
             font-size: 1.2rem;
             padding: 0.3rem 0.3rem 0.3rem 0.6rem;
         }
+    }
+    .blog-post-tag {
+        display: inline-block;
+        align-self: center;
+        margin-top: 0.25rem;
+        padding: 0.2em 0.8em;
+        font-size: 0.6rem;
+        font-weight: 500;
+        color: #3560a9;
+        background: #e7f0fa;
+        border-radius: 999px;
+        letter-spacing: 0.03em;
     }
 </style>

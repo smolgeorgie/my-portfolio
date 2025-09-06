@@ -17,6 +17,9 @@
 				<h3 class="blog-post-title">
 					<a href={work.url} class="title-link" target="_blank" rel="noopener noreferrer">{work.title.en}</a>
 				</h3>
+				{#if work.tag}
+					<span class="blog-post-tag">{work.tag}</span>
+				{/if}
 			</li>
 		{/each}
 	</ul>
@@ -24,6 +27,7 @@
 
 <style>
 .work-wrapper {
+
 	max-width: 90%;
 	padding: 0;
 	outline: 2px solid #ccc;
@@ -110,5 +114,19 @@ h2 {
 	text-decoration: none;
 	color: #333;
 	transition: color 0.2s ease;
+}
+
+/* Tag style */
+.blog-post-tag {
+	display: inline-block;
+	align-self: center;
+	margin-top: 0.25rem;
+	padding: 0.2em 0.8em;
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: #3560a9;
+	background: #e7f0fa;
+	border-radius: 999px;
+	letter-spacing: 0.03em;
 }
 </style>

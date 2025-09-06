@@ -5,8 +5,9 @@ export const workPages = [
 			nl: 'Creditcard',
 			en: 'Credit Card'
 		},
-		image: '/images/cool-darth.webp',
-		url: 'https://profile-card-s3-udja3.vercel.app/'
+		image: '/images/creditcard.webp',
+		url: 'https://profile-card-s3-udja3.vercel.app/',
+		tag: 'Desktop only'
 	},
 	{
 		id: 'milledoni',
@@ -14,8 +15,9 @@ export const workPages = [
 			nl: 'Milledoni',
 			en: 'Milledoni'
 		},
-		image: '/images/cool-darth.webp',
-		url: 'https://milledoni.dev.fdnd.nl'
+		image: '/images/milledoni.webp',
+		url: 'https://milledoni.dev.fdnd.nl',
+		tag: 'Desktop only'
 	},
 	{
 		id: 'paerstudio',
@@ -23,7 +25,7 @@ export const workPages = [
 			nl: 'Paer studio',
 			en: 'Paer studio'
 		},
-		image: '/images/cool-darth.webp',
+		image: '/images/paerstudio.webp',
 		url: 'https://paerstudio.com/'
 	},
 	{
@@ -32,7 +34,7 @@ export const workPages = [
 			nl: 'FDND Website',
 			en: 'FDND Website'
 		},
-		image: '/images/cool-darth.webp',
+		image: '/images/fdndwebsite.webp',
 		url: 'https://fdnd-programma.netlify.app/'
 	}
 ];
