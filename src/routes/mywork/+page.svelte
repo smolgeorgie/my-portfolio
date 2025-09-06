@@ -30,8 +30,6 @@
 	border-radius: 8px;
 	margin: 1rem auto;
 }
-
-/* Use a media query instead */
 @media (min-width: 1600px) {
 	.work-wrapper {
 		max-width: 1450px;
