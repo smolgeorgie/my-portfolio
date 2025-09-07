@@ -45,7 +45,7 @@ export const blogPost = {
 		<p><strong>A nostalgic nod to the internet of the past</strong></p>
 		<h2>Back in time</h2>
 		<p> If you grew up in the Netherlands before the Facebook era, chances are you once had a profile on <strong>Hyves</strong>. 
-			For those who don't (anymore) know it: Hyves was the place to connect online with your friends, even before Facebook became popular here. 
+			For those who are not familiar with it: Hyves was the place to connect online with your friends, even before Facebook became popular here. 
 			It was launched in <time datetime="2004">2004</time> and was the Netherlands' social platform for years, until it went offline permanently in <time datetime="2013">2013</time>.
 		</p>
 		<p>
