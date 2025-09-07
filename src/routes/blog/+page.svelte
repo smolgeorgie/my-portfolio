@@ -1,14 +1,12 @@
 <script>
+    import Banner from '$lib/components/Banner.svelte';
 import { getAllBlogPosts } from '$lib/blogUtils.js';
 import { currentLanguage } from '$lib/stores.js';
 
 const posts = getAllBlogPosts();
 </script>
 
-<svelte:head>
-    <title>Blogs - Ilona van Oosbree</title>
-</svelte:head>
-
+<Banner />
 <div class="blogs-list-page">
     <h1>Blogs</h1>
     {#if posts.length === 0}
