@@ -3,7 +3,7 @@
         <img src="/images/ilona.jpg" alt="Logo" class="logo" width="150" height="150">
     </div>
     <ul>
-        <li> <a href="mailto:ilonavanoosbree@live.nl?subject=Hello%20Ilona&body=I%20would%20like%20to%20get%20in%20touch."> Email </a></li>
+        <li> <a href="mailto:ilonavanoosbree@live.nl?subject=Get%20In%20Touch&body=I%20would%20like%20to%20get%20in%20touch."> Email </a></li>
         <li> <a href="#LinkedIn"> LinkedIn </a></li>
     </ul>
 </div>
