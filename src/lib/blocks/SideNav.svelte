@@ -1,4 +1,3 @@
-
 <div class="side-nav">
     <div class="logo-container">
         <img src="/images/ilona.jpg" alt="Logo" class="logo" width="150" height="150">
@@ -9,122 +8,60 @@
     </ul>
 </div>
 
-<style> 
-    .side-nav {
+<style>
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    background: #e9f3fc;
+    border-radius: 8px 8px 1px 1px;
+    padding: 0.6rem;
+    align-items: center;
+    text-align: center;
+}
 
-        display: flex;
-        flex-direction: column;
-        background: #e9f3fc;
-        border-radius: 8px 8px 1px 1px;
-        box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.1);
-        padding: 1rem;
+.logo-container {
+    width: 100%;
+    margin-bottom: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        ul {
+.logo-container img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
+    max-height: 40vw;
+    object-fit: cover;
+}
 
-            list-style: none;
-            padding: 0;
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-            a {
-                text-decoration: none;
-                color: black;
-                display: block;
-            }
-        }
-    }
+ul li {
+    margin-bottom: 0.5em;
+}
 
-    .logo-container {
+ul a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 0.3em 0.8em;
+    border-radius: 4px;
+    transition: background 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-        img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.282);
-        }
-    }
-
-    @media (max-width: 1200px) {
-        .logo-container img {
-            width: 220px;
-            height: 220px;
-        }
-        
-        .side-nav {
-            padding: 0.8rem;
-        }
-    }
-
-    @media (max-width: 1024px) {
-        .logo-container img {
-            width: 200px;
-            height: 200px;
-        }
-        
-        .side-nav {
-            padding: 0.7rem;
-        }
-    }
-
-    @media (max-width: 900px) {
-        .logo-container img {
-            width: 180px;
-            height: 180px;
-        }
-        
-        .side-nav {
-            padding: 0.6rem;
-        }
-        
-        .side-nav ul {
-            font-size: 0.9rem;
-        }
-    }
-
-    @media (max-width: 768px) { 
-        .side-nav {
-            align-items: center;
-            text-align: center;
-            padding: 1rem;
-        }
-        
-        .logo-container {
-            order: -1; /* Ensures the logo stays at the top */
-            margin-bottom: 1rem;
-            
-            img {
-                width: 150px;
-                height: 150px;
-            }
-        }
-        
-        ul {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 1rem;
-            
-            li {
-                margin-bottom: 0.5rem;
-            }
-        }
-    }
-
-    @media (max-width: 480px) {
-        .side-nav {
-            padding: 0.8rem;
-        }
-        
-        .logo-container {
-            margin-bottom: 0.8rem;
-            
-            img {
-                width: 120px;
-                height: 120px;
-            }
-        }
-        
-        ul {
-            font-size: 0.9rem;
-        }
-    }
+ul a:hover {
+    background: #d6e7fa;
+}
 </style>
