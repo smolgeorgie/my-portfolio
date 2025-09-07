@@ -43,6 +43,7 @@
     .content-container {
         display: grid;
         grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: auto;
         gap: 1rem;
         height: auto;
         padding: 1rem;

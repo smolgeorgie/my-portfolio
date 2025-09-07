@@ -10,6 +10,7 @@ export const blogPost = {
 	},
 	image: "/images/cool-darth.webp",
 	date: "2024-06-10",
+	tag: "Portfolio",
 	content: {
 		nl: `
 		<h1>Mijn portfolio, geïnspireerd op Hyves</h1>
