@@ -37,6 +37,7 @@
 }
 
 ul {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,17 +48,18 @@ ul {
 }
 
 ul li {
+    width: 100%;
     margin-bottom: 0.5em;
 }
 
 ul a {
+    width: 100%;
     text-decoration: none;
     color: black;
     display: block;
     padding: 0.3em 0.8em;
     border-radius: 4px;
     transition: background 0.2s;
-    width: 100%;
     box-sizing: border-box;
 }
 
