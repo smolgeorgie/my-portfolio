@@ -13,13 +13,13 @@
 			title: "Feathered Indians",
 			artist: "Tyler Childers",
 			src: "/music/Feathered Indians.mp3",
-			cover: "/favicon.png" // Using favicon as placeholder
+			cover: "/favicon.png" 
 		},
 		{
 			title: "Nine Ball",
 			artist: "Zach Bryan",
 			src: "/music/Zach Bryan - Nine Ball.mp3",
-			cover: "/favicon.png" // Using favicon as placeholder
+			cover: "/favicon.png"
 		}
 	];
 	
@@ -170,7 +170,6 @@
 			</div>
 		</main>
 		
-		<!-- Footer with typical Hyves styling -->
 		<footer class="hyves-footer">
 			<button class="hyves-link" aria-label="Klik hier om alle liedjes te bekijken"> Bekijk alle liedjes ► </button>
 		</footer>
@@ -178,7 +177,6 @@
 </section>
 
 <style>
-	/* Accessibility helpers */
 	.visually-hidden {
 		position: absolute;
 		width: 1px;
@@ -190,8 +188,6 @@
 		white-space: nowrap;
 		border: 0;
 	}
-
-	/* Hyves-style Music Player */
 	.hyves-player {
 		margin: 1rem auto;
 		font-family: Arial, sans-serif;

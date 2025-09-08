@@ -32,6 +32,7 @@
     outline: 2px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
+    height: fit-content;
 }
 
 h2 {

@@ -17,6 +17,7 @@
     padding: 0.6rem;
     align-items: center;
     text-align: center;
+    height: fit-content;
 }
 
 .logo-container {

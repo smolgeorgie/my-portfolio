@@ -1,12 +1,14 @@
 <script>
     import Music from '../molecules/Music.svelte';
+    import Bio from '../components/Bio.svelte';
     import { currentLanguage, translations } from "$lib/stores.js";
     
     $: t = translations[$currentLanguage];
 </script>
 
 <section class="intro-container">
-    <h2> {t.facts} </h2>
+    <Bio />
+    <h2> {t.profile} </h2>
         <div class="intro">
         <Music />
         <ul>
