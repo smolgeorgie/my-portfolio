@@ -91,6 +91,15 @@
         margin-bottom: 0.5rem;
     }
     
+    .blog-content :global(img) {
+        display: block;
+        margin: 2rem auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
     .blog-navigation {
         margin-top: 3rem;
         padding-top: 2rem;

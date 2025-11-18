@@ -78,6 +78,7 @@ export const blogPost = {
         De AI-chatbot helpt de gebruiker om gericht te zoeken naar cadeaus, 
         zonder dat je zelf eindeloos door alle producten hoeft te scrollen. 
         De prompt stuurt de AI aan om concrete vragen te stellen en passende cadeaus uit de lijst te kiezen.
+        Hier onder kan je ook zien dat de foto's van de cadeaus worden weergegeven in de zoekresultaten aan de hand van de prompt die wordt meegegeven.
         </p>
     </section>
 
@@ -168,6 +169,7 @@ export const blogPost = {
         The AI chatbot helps the user to search specifically for gifts, 
         without having to scroll endlessly through all the products yourself. 
         The prompt directs the AI to ask concrete questions and choose suitable gifts from the list.
+        Below you can also see that the photos of the gifts are displayed in the search results based on the prompt that is provided.
         </p>
     </section>
 

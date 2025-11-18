@@ -17,7 +17,7 @@ export const workPages = [
 		},
 		image: '/images/milledoni.webp',
 		blogPost: 'milledoni-post',
-		tag: 'Desktop only'
+		tag: 'Blog'
 	},
 	{
 		id: 'paerstudio',

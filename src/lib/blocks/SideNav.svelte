@@ -5,6 +5,7 @@
     <ul>
         <li> <a href="mailto:ilonavanoosbree@live.nl?subject=Get%20In%20Touch&body=I%20would%20like%20to%20get%20in%20touch."> Email </a></li>
         <li> <a href="#LinkedIn"> LinkedIn </a></li>
+        <li> <a href="https://github.com/smolgeorgie"> GitHub </a></li>
     </ul>
 </div>
 
