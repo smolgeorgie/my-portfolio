@@ -16,7 +16,7 @@ export const workPages = [
 			en: 'Milledoni'
 		},
 		image: '/images/milledoni.webp',
-		url: 'https://milledoni.dev.fdnd.nl',
+		blogPost: 'milledoni-post',
 		tag: 'Desktop only'
 	},
 	{

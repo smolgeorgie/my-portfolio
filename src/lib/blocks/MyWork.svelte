@@ -10,12 +10,12 @@
            {#each workPages as page (page.id)}
                <li class="blog-post-item">
                    <article class="blog-post-card">
-                       <a href={page.url} class="blog-post-link">
+                       <a href={page.blogPost ? `/blog/${page.blogPost}` : page.url} class="blog-post-link" target={page.url ? "_blank" : undefined} rel={page.url ? "noopener noreferrer" : undefined}>
                            <img src={page.image} alt={page.title[$currentLanguage]} class="blog-post-image" />
                        </a>
                    </article>
                    <h3 class="blog-post-title">
-                       <a href={page.url} class="title-link">{page.title[$currentLanguage]}</a>
+                       <a href={page.blogPost ? `/blog/${page.blogPost}` : page.url} class="title-link" target={page.url ? "_blank" : undefined} rel={page.url ? "noopener noreferrer" : undefined}>{page.title[$currentLanguage]}</a>
                    </h3>
                    {#if page.tag}
                        <span class="blog-post-tag">{page.tag}</span>
